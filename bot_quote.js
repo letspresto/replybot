@@ -20,6 +20,11 @@ twitter.getStream("user", {}, accessToken, tokenSecret, onData);
 
 function onData(error, streamEvent) {
 
+    var delayMillis = 5000; //1 second
+
+    setTimeout(function() {
+    //your code to be executed after 1 second
+
     // a few different cases.
     // case 1: if the object is empty, simply return
     if (Object.keys(streamEvent).length === 0) {
@@ -99,4 +104,6 @@ function onData(error, streamEvent) {
     else {
         console.log(streamEvent);
     }
+    }, delayMillis);
 }
+
