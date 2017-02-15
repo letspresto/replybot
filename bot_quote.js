@@ -20,7 +20,7 @@ twitter.getStream("user", {}, accessToken, tokenSecret, onData);
 
 function onData(error, streamEvent) {
 
-    var delayMillis = 5000; //1 second
+    var delayMillis = 5000; //5 second
 
     setTimeout(function() {
     //your code to be executed after 1 second
